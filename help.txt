@@ -1,0 +1,30 @@
+from datetime import datetime
+now = datetime.now()
+print(now.strftime("%Y-%m-%d %H:%M:%S.%f"))
+
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(1 << 25)
+
+# heapq
+import heapq
+
+def unite(d, i, j):
+    return (d << 30) | (i << 15) | j
+
+MASK = 2**15 - 1
+def split(element):
+    return element >> 30, (element >> 15) & MASK, element & MASK
+
+pQ = []
+pQ.append(unite(d(i,j), i, j))
+heapq.heapify(pQ)
+while(len(pQ) > 0):
+    di, vi, ui = split(pQ[0])
+    heapq.heappop(pQ)
+
+# DSU
+from atcoder.dsu import DSU
+dsu = DSU(N + Q)
+if False == dsu.same(v, u):
+    dsu.merge(v,u)
