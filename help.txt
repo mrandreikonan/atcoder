@@ -28,3 +28,7 @@ from atcoder.dsu import DSU
 dsu = DSU(N + Q)
 if False == dsu.same(v, u):
     dsu.merge(v,u)
+
+# Max int
+import sys
+max_int = sys.maxsize
