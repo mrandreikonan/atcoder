@@ -43,3 +43,6 @@ queue.append('task2')
 # Dequeue
 first_task = queue.popleft()
 len(queue)
+
+import bisect
+bisect.bisect_left(list, value)
