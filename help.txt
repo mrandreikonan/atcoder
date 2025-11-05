@@ -46,3 +46,11 @@ len(queue)
 
 import bisect
 bisect.bisect_left(list, value)
+
+# sorted containers
+from sortedcontainers import SortedList
+X = SortedList([])
+X.bisect_left(value)
+X[index]
+X.pop(index)
+X.add(value)
