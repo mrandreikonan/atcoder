@@ -54,3 +54,17 @@ X.bisect_left(value)
 X[index]
 X.pop(index)
 X.add(value)
+
+# Dictionary
+visited = {v: False for v in G.keys()}
+if (X-R) not in G:
+    G[X-R] = [X+R]
+else:
+    G[X-R].append(X+R)
+
+# Set
+used = set()
+if u in used:
+used.add(u)
+
+P = [(value, index) for index, value in enumerate(A)]
